@@ -4,11 +4,13 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+
 
 @Data
 @NoArgsConstructor
@@ -21,8 +23,10 @@ public class Usuario {
     @Column(name = "nombre_usuario")
     private String nombreUsuario;
     @Column(name = "dni_usuario")
+    @NotNull(message = "El campo es obligatorio")
     private String dniUsuario;
     @Column
+    @NotNull(message = "El campo es obligatorio")
     private String correo;
     @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;

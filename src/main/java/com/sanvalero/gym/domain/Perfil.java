@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class Perfil {
     @Column(name = "ritmo_cardiaco")
     private int ritmoCardico;
     @Column
+    @NotNull(message = "El campo es obligatorio")
     private int peso;
     @Column
     private int imc;
@@ -29,6 +31,7 @@ public class Perfil {
     @Column(name = "fecha_medicion")
     private LocalDate fechaMedicion;
     @Column
+    @NotNull(message = "El campo es obligatorio")
     private String medidas;
 
 }
