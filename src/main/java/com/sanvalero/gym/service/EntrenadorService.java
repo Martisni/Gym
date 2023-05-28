@@ -1,4 +1,9 @@
 package com.sanvalero.gym.service;
 
-public class EntrenadorService {
+import com.sanvalero.gym.domain.Entrenador;
+
+import java.util.List;
+
+public interface EntrenadorService {
+    List<Entrenador> findAll();
 }
