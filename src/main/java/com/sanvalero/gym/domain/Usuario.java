@@ -20,7 +20,7 @@ public class Usuario {
     private long id;
     @Column(name = "nombre_usuario")
     private String nombreUsuario;
-    @Column
+    @Column(name = "dni_usuario")
     private String dniUsuario;
     @Column
     private String correo;
