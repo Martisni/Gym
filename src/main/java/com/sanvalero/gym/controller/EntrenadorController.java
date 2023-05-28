@@ -17,8 +17,8 @@ public class EntrenadorController {
 
     @GetMapping("/gym/entrenadores")
     public ResponseEntity<List<Entrenador>> getEntrenador() {
-        List<Entrenador> entrenadors = entrenadorService.findAll();
-        return ResponseEntity.ok(entrenadors);
+        List<Entrenador> entrenadores = entrenadorService.findAll();
+        return ResponseEntity.ok(entrenadores);
     }
 
 }

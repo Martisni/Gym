@@ -1,4 +1,9 @@
 package com.sanvalero.gym.service;
 
-public class PerfilService {
+import com.sanvalero.gym.domain.Perfil;
+
+import java.util.List;
+
+public interface PerfilService {
+    List<Perfil> findAll();
 }

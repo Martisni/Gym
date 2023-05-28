@@ -1,4 +1,9 @@
 package com.sanvalero.gym.service;
 
-public class HorarioService {
+import com.sanvalero.gym.domain.Horario;
+
+import java.util.List;
+
+public interface HorarioService {
+    List<Horario> findAll();
 }
