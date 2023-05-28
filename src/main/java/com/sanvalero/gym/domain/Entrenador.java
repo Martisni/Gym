@@ -23,7 +23,7 @@ public class Entrenador {
     @Column(name = "apellido_entrenador")
     private String apellidoEntrenador;
     @Column
-    private String dni;
+    private String dniEntrenador;
     @Column(name = "fecha_contrato")
     private LocalDate fechaContrato;
     @Column

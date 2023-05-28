@@ -21,7 +21,7 @@ public class Usuario {
     @Column(name = "nombre_usuario")
     private String nombreUsuario;
     @Column
-    private String dni;
+    private String dniUsuario;
     @Column
     private String correo;
     @Column(name = "fecha_nacimiento")
