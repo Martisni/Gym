@@ -2,11 +2,11 @@ package com.sanvalero.gym.controller;
 
 import com.sanvalero.gym.domain.Entrenador;
 import com.sanvalero.gym.service.EntrenadorService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,10 +22,16 @@ public class EntrenadorController {
         return ResponseEntity.ok(entrenadores);
     }
 
-    @GetMapping("/gym/entrenador/{dniEntrenador}")
+    @GetMapping("/gym/entrenador")
     public ResponseEntity<List<Entrenador>> getEntrenador(@RequestParam String dniEntrenador) {
         List<Entrenador> entrenador = entrenadorService.findByDniEntrenador(dniEntrenador);
         return ResponseEntity.ok(entrenador);
+    }
+
+    @PostMapping("/gym/entrenadores")
+    public ResponseEntity<Entrenador> addEntrenador(@Valid @RequestBody Entrenador entrenador) {
+        Entrenador entrenados = entrenadorService.addEntrenador(entrenador);
+        return ResponseEntity.status(HttpStatus.CREATED).body(entrenados);
     }
 
 

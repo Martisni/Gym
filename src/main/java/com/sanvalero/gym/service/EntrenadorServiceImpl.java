@@ -23,4 +23,9 @@ public class EntrenadorServiceImpl implements EntrenadorService {
     public List<Entrenador> findByDniEntrenador(String dniEntrenador) {
         return entrenadorRepository.findByDniEntrenador(dniEntrenador);
     }
+
+    @Override
+    public Entrenador addEntrenador(Entrenador entrenador) {
+        return entrenadorRepository.save(entrenador);
+    }
 }
