@@ -1,4 +1,10 @@
 package com.sanvalero.gym.service;
 
-public class UsuarioService {
+import com.sanvalero.gym.domain.Usuario;
+
+import java.util.List;
+
+public interface UsuarioService {
+
+    List<Usuario> findAll();
 }

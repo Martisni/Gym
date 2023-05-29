@@ -15,7 +15,7 @@ public class PropietarioController {
     @Autowired
     private PropietarioService propietarioService;
 
-    @GetMapping("/gym/propietario")
+    @GetMapping("/gym/propietarios")
     public ResponseEntity<List<Propietario>> getPropietario() {
         List<Propietario> propietarios = propietarioService.findAll();
         return ResponseEntity.ok(propietarios);

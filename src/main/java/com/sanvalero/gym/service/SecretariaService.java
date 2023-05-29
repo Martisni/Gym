@@ -1,4 +1,11 @@
 package com.sanvalero.gym.service;
 
-public class SecretariaService {
+import com.sanvalero.gym.domain.Secretaria;
+
+import java.util.List;
+
+public interface SecretariaService {
+
+    List<Secretaria> findAll();
+
 }
