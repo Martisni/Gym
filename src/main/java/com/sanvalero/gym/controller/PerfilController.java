@@ -15,7 +15,7 @@ public class PerfilController {
     @Autowired
     private PerfilService perfilService;
 
-    @GetMapping("/gym/perfil")
+    @GetMapping("/gym/perfiles")
     public ResponseEntity<List<Perfil>> getPerfil() {
         List<Perfil> perfiles = perfilService.findAll();
         return ResponseEntity.ok(perfiles);
