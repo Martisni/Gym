@@ -32,7 +32,7 @@ public class Horario {
     private double latitude;
     @Column
     private double longitude;
-    @Column(name = "franja_horaria")
-    private String franjaHoraria;
+    @Column
+    private String local;
 
 }

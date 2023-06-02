@@ -11,4 +11,5 @@ public interface EntrenadorRepository extends CrudRepository<Entrenador, Long> {
 
     List<Entrenador> findAll();
     List<Entrenador> findByDniEntrenador(String dniEntrenador);
+    List<Entrenador> findByEspecialidad(boolean especialidad);
 }

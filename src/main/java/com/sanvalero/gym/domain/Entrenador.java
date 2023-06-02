@@ -28,7 +28,7 @@ public class Entrenador {
     @Column(name = "fecha_contrato")
     private LocalDate fechaContrato;
     @Column
-    @NotNull(message = "El campo es obligatorio")
+    @NotNull
     private boolean especialidad;
     @Column
     @Min(value = 18)
